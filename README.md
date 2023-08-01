@@ -39,7 +39,11 @@
     | `POST`   | http://127.0.0.1:8000/api/Person/ |Create the Person's record by passing requesting_floor and closest elevator is assigned to the person|
     | `GET`   | http://127.0.0.1:8000/api/Person/| Retrieve details of all Persons with assigned elevator   |
     | `GET`   | http://127.0.0.1:8000/api/Person/6| Retrieve details of individual Person with assigned elevator having id=6   |
-    | `PATCH`   |http://127.0.0.1:8000/api/Person/6     | Enter the destination_floor for the person with id=6 so that elevator moves towards the destination floor     |
+    | `PATCH`   |http://127.0.0.1:8000/api/Person/6/    | Enter the destination_floor for the person with id=6 so that elevator moves towards the destination floor     |
 
  
-   
+# Headers
+
+    |  Header Key|  Value |
+    | :---         |     :---:      |
+    | `Accept``   |  `application/json`   |
