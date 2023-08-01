@@ -20,7 +20,7 @@ from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('elevator/',views.ElevatorAPI.as_view(),name='elevator'),
-    path('display_elevator_details/<str:pk>/',views.ElevatorAPI.as_view(),name='displayelevator'),
+    path('elevator/<str:pk>/',views.ElevatorAPI.as_view(),name='displayelevator'),
     path('AllPerson/',views.PersonAPI.as_view(),name='AllPerson'),
     path('Person/<str:pk>/',views.PersonAPI.as_view(),name='Person')
     
