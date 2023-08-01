@@ -45,5 +45,5 @@
 # Headers:
     
     | Header Key | Value |
-    |:---  | :---: |
+    |:---  | ---: |
     | `Accept` | `application/json`|
