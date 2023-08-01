@@ -42,6 +42,6 @@
     | `PATCH`   |http://127.0.0.1:8000/api/Person/6/    | Enter the destination_floor for the person with id=6 so that elevator moves towards the destination floor     |
 
 # Headers:
-  |Header|Value|
+  |Header Key|Value|
   |:---| ---:|
   |`Accept`|`application/json`|
