@@ -41,9 +41,7 @@
     | `GET`   | http://127.0.0.1:8000/api/Person/6| Retrieve details of individual Person with assigned elevator having id=6   |
     | `PATCH`   |http://127.0.0.1:8000/api/Person/6/    | Enter the destination_floor for the person with id=6 so that elevator moves towards the destination floor     |
 
-
 # Headers:
-    
-    | Header Key | Value |
-    |:---  | ---: |
-    | `Accept` | `application/json`|
+  |Header|Value|
+  |:---| ---:|
+  |`Accept`|`application/json`|
