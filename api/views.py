@@ -34,6 +34,7 @@ def find_closest_elevator(requested_floor, elevators=elevators):
         closest_elevator.save()
         
         # Send the elevator to the requested floor and update elevator status
+        print(f"Sending Elevator: {closest_elevator.elevator_id} from {closest_elevator.current_floor} floor to requested floor: {requested_floor}")
         #Checks elevator floor is equal to requested floor or not 
         while closest_elevator.current_floor!=requested_floor:
             if closest_elevator.current_floor < requested_floor:
@@ -42,16 +43,16 @@ def find_closest_elevator(requested_floor, elevators=elevators):
             else:
                 #elevator floor decrease one by one(moves down)
                 closest_elevator.current_floor -= 1
-            print(f"{closest_elevator} moving to floor {closest_elevator.current_floor}...")
+            print(f"{closest_elevator} moving to floor: {closest_elevator.current_floor}...")
             
             
             
-        print(f"Sending elevator {closest_elevator.elevator_id} to floor {requested_floor}")
+        
         #opening door of elevator for person
         dooropen=door_open(closest_elevator,requested_floor)
         closest_elevator.save()
         #returns message to show.
-        return (f"Sending elevator {closest_elevator.elevator_id} to floor {requested_floor}",closest_elevator,dooropen)
+        return (f"Sending elevator {closest_elevator.elevator_id} to requested floor {requested_floor}",closest_elevator,dooropen)
     else:
         return ("All elevators are busy. Please wait for an available elevator.")
 
@@ -73,7 +74,7 @@ def move_to_destinationfloor(assigned_elevator, destination_floor):
                 #elevator floor decreases one by one till floor is same as destination floor
                assigned_elevator.current_floor -= 1
 
-            print(f"assigned_elevator moving to floor {assigned_elevator.current_floor}...")
+            print(f"assigned_elevator is moving to floor {assigned_elevator.current_floor}...")
 
         print(f"Assigned elevator: {assigned_elevator.elevator_id} has reached the destination floor: {destination_floor}.")
         assigned_elevator.is_busy=False
